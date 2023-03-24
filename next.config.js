@@ -95,13 +95,19 @@ module.exports = withPlausibleProxy()(withTM(withBundleAnalyzer(withPWA({
 			1: process.env.WS_URL_MAINNET,
 			10: process.env.WS_URL_OPTIMISM,
 			250: process.env.WS_URL_FANTOM,
-			42161: process.env.WS_URL_ARBITRUM
+			42161: process.env.WS_URL_ARBITRUM,
+			137: process.env.WS_URL_POLYGON || 'https://polygonscan.com/', 
+			56: process.env.WS_URL_BSC|| 'https://testnet.bscscan.com',
+			43114: process.env.WS_URL_AVALANCHE || 'https://snowtrace.io/'
 		},
 		JSON_RPC_URL: {
 			1: 'https://1rpc.io/eth' || process.env.RPC_URL_MAINNET,
 			10: process.env.RPC_URL_OPTIMISM,
 			250: process.env.RPC_URL_FANTOM,
-			42161: process.env.RPC_URL_ARBITRUM
+			42161: process.env.RPC_URL_ARBITRUM,
+			137:  process.env.RPC_URL_POLYGON || 'https://1rpc.io/matic',
+			56:  process.env.RPC_URL_BSC || 'https://1rpc.io/bnb',
+			43114:  process.env.RPC_URL_AVALANCHE || 'https://1rpc.io/avax/c'
 		},
 		ALCHEMY_KEY: process.env.ALCHEMY_KEY,
 		INFURA_KEY: process.env.INFURA_KEY,

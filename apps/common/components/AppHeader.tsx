@@ -129,7 +129,7 @@ export function	AppHeader(): ReactElement {
 			return [1];
 		}
 
-		return [1, 10, 250, 42161];
+		return [1, 10, 250, 42161, 137, 56, 43114];
 	}, [pathname]);
 
 	return (

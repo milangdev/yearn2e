@@ -50,7 +50,7 @@ const WithLayout = memo(function WithLayout(props: AppProps): ReactElement {
 							initial={'initial'}
 							animate={'enter'}
 							exit={'exit'}
-							className={'my-0 h-full md:mb-0 md:mt-16'}
+							className={'my-0 md:mb-0 md:mt-16'}
 							variants={variants}>
 							{getLayout(<Component router={props.router} {...pageProps} />, router)}
 						</motion.div>

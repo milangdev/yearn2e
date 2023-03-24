@@ -38,6 +38,10 @@
 	@apply scroll-mt-12 mb-0 md:mb-44;
 }
 
+#__next{
+	background-color: rgb(122 122 122 / 24%);
+}
+
 /* 🔵 - Yearn Finance ******************************************************************************
 	** AppBox is the style used to make the nices animations on the home page feel nice and smooth
 	** A custom overwrite is required for dark/light mode

@@ -80,6 +80,7 @@ function	AppBox({app}: {app: typeof apps[0]}): ReactElement {
 
 	return (
 		<Link
+			className={'border'}
 			prefetch={false}
 			key={app.href}
 			href={app.href}>
@@ -186,30 +187,32 @@ function	TextAnimation(): ReactElement {
 	);
 }
 
-function	Index(): ReactElement {
+function Index(): ReactElement {
 	return (
 		<>
-			<div className={'mx-auto mt-6 mb-10 flex flex-col justify-center md:mt-20 md:mb-14'}>
-				<div className={'relative h-12 w-[300px] self-center md:h-[104px] md:w-[600px]'}>
-					<TextAnimation />
-				</div>
-				<div className={'my-8'}>
-					<p className={'text-center text-lg md:text-2xl'}>
-						{'With '}
-						<b>{'Yearn'}</b>
-						{'. The Yield Protocol.'}
-					</p>
-				</div>
-				<div className={'mb-6'}>
+			<div className={'md:block lg:my-auto lg:flex'}>
+				<div className={'mx-auto mt-6 mb-10 flex flex-col justify-center md:mt-20 md:mb-14'}>
+					<div className={'relative h-12 w-[300px] self-center md:h-[104px] md:w-[600px]'}>
+						<TextAnimation />
+					</div>
+					<div className={'my-8'}>
+						<p className={'text-center text-lg md:text-2xl'}>
+							{'With '}
+							<b>{'Yearn'}</b>
+							{'. The Yield Protocol.'}
+						</p>
+					</div>
+					<div className={'mb-6'}>
 
-					<p className={'text-center text-sm text-neutral-500 md:text-base'}>
-						<Balancer>{'Yearn is a decentralized suite of products helping individuals, DAOs, and other protocols\nearn yield on their digital assets.'}</Balancer>
-					</p>
+						<p className={'text-center text-sm text-neutral-500 md:text-base'}>
+							<Balancer>{'Yearn is a decentralized suite of products helping individuals, DAOs, and other protocols\nearn yield on their digital assets.'}</Balancer>
+						</p>
+					</div>
 				</div>
+				<section className={'grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2'}>
+					{apps.map((app): ReactElement => <AppBox key={app.href} app={app} />)}
+				</section>
 			</div>
-			<section className={'grid grid-cols-1 gap-10 md:grid-cols-3 lg:grid-cols-4'}>
-				{apps.map((app): ReactElement => <AppBox key={app.href} app={app} />)}
-			</section>
 		</>
 	);
 }
